@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@media screen and (max-width: 768px) {
+  .swiper-container {
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden; /* パディングボックスに合わせて切り取られる */
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiper-container .swiper-wrapper {
+    /* display: flex; */
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiper-container .swiper-wrapper .swiper-slide {
+    text-align: center;
+	/* flex-shrink: initial;
+	width: inherit;
+	height: initial;
+	position: initial;
+	transition-property: initial;
+	display: initial; */
+  }
+}
+.swiper-container .swiper-pagination {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .swiper-container .swiper-pagination {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+}
