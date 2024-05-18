@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	  allowTouchMove: true, //ドラッグ（スワイプ）でのスライド切り替えを無効
 	}
 
-	const breakPoint = 768; //ブレークポイント
+	const breakPoint = 767; //ブレークポイント
 
 	let swiper;
 
@@ -44,3 +44,69 @@ window.addEventListener('DOMContentLoaded', () => {
 	  }
 	}, false);
   }, false);
+
+
+
+
+function fadeAnime(){
+	$('.blurTrigger').each(function(){ //blurTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			$(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
+		} else {
+			$(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
+		}
+	});
+
+	$('.lineTrigger').each(function(){ //lineTriggerというクラス名が
+		const elemPos = $(this).offset().top-50;//要素より、50px上の
+		const scroll = $(window).scrollTop();
+		const windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			$(this).addClass('lineAnime');// 画面内に入ったらlineanimeというクラス名を追記
+		} else {
+			$(this).removeClass('lineAnime');// 画面外に出たらlineanimeというクラス名を外す
+		}
+	});
+
+	$('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			$(this).addClass('fadeUp');// 画面内に入ったらfadeUpというクラス名を追記
+		} else {
+			$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
+		}
+	});
+
+	$('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			$(this).addClass('fadeLeft');// 画面内に入ったらfadeLeftというクラス名を追記
+		} else {
+			$(this).removeClass('fadeLeft');// 画面外に出たらfadeLeftというクラス名を外す
+		}
+	});
+
+	$('.fadeRightTrigger').each(function(){ //fadeRightTriggerというクラス名が
+		var elemPos = $(this).offset().top-50;//要素より、50px上の
+		var scroll = $(window).scrollTop();
+		var windowHeight = $(window).height();
+		if (scroll >= elemPos - windowHeight){
+			$(this).addClass('fadeRight');// 画面内に入ったらfadeRightというクラス名を追記
+		}else{
+			$(this).removeClass('fadeRight');// 画面外に出たらfadeRightというクラス名を外す
+		}
+	});
+
+}
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+	fadeAnime();
+});

@@ -303,7 +303,7 @@ $ly-tab: 60px;
 		left: 0;
 		width: 50vw;
 		height: 25vw;
-		z-index: 10;
+		z-index: 100;
 		@include mq(min, md) {
 			width: 50vw;
 		}
@@ -318,7 +318,7 @@ $ly-tab: 60px;
 		right: 0;
 		width: 50vw;
 		height: 25vw;
-		z-index: 10;
+		z-index: 100;
 		@include mq(min, md) {
 			width: 50vw;
 		}
@@ -326,12 +326,18 @@ $ly-tab: 60px;
 
 	&__wrap {
 		@include sec-blanc();
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		position: sticky;
+		z-index: 20;
+	}
+
+	&__content {
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		position: sticky;
-		z-index: 20;
-
+		padding: 60px 0;
 		@include mq(min, md) {
 			gap: 40px;
 		}
@@ -370,7 +376,7 @@ $ly-tab: 60px;
 		}
 	}
 
-	&__btn-wrap {
+	&__btn-inner {
 		background: $color-sub;
 		border-radius: 100vh;
 		box-shadow: 4px 4px 4px 0px rgba(51, 51, 51, 0.40);
@@ -491,6 +497,25 @@ $ly-tab: 60px;
 	}
 }
 
+.mv-contact {
+	background-color: rgba($color-white, 0.5);
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	width: 100%;
+	height: 160px;
+
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&__btn-inner {
+		background: lighten($color-sub, 10%);
+		opacity: 0.7;
+	}
+}
+
 
 .main {
 	background: linear-gradient(180deg, $color-white-00 0%, $color-base-light 100%), linear-gradient(180deg, $color-white-07 0%, $color-white-00 100%), url(../img/main-bk.png) center / cover no-repeat, linear-gradient(180deg, $color-base 0%, $color-base-light 100%);
@@ -518,10 +543,23 @@ $ly-tab: 60px;
 }
 
 .secondary {
-	background: linear-gradient(180deg, $color-base-light 0%, $color-white-40 100%), url(../img/bk-ship.jpeg) center / cover no-repeat;
+	position: relative;
+
+	&__inner {
+		// background: linear-gradient(180deg, $color-base-light 0%, $color-white-40 100%);
+		background: linear-gradient(180deg, $color-base-light 0%, $color-white-40 100%), url(../img/bk-ship.jpeg) center / cover no-repeat;
+		background-attachment: fixed;
+		width: 100%;
+		// height: 100vh;
+		// position: fixed;
+		// top: 0;
+		// left: 0;
+		// overflow: auto;
+	}
 
 	&__wrap {
 		@include sec-blanc();
+		// padding-bottom: 0 !important;
 	}
 
 	.sec-title {
@@ -529,60 +567,281 @@ $ly-tab: 60px;
 		margin-bottom: 60px;
 	}
 
-	&__content-list {
-		display: flex;
+	&__content {
+		background: linear-gradient(180deg, $color-base-light 0%, $color-white-40 100%), url(../img/bk-ship.jpeg) center / cover no-repeat;
+		background-attachment: fixed;
+		width: 100%;
+	}
 
-		gap: 20px 40px;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		width: 100%;
+
 		@include mq(min, sm) {
-			flex-wrap: wrap;
-			flex-direction: row;
+			// flex-wrap: wrap;
+			// flex-direction: row;
 			// gap: 20px 20px;
 		}
 		@include mq(max, md) {
 			flex-direction: row;
 			gap: 0;
 		}
-		@include mq(min, xl) {
+		@include mq(min, md) {
+			// flex-wrap: wrap;
+			// justify-content: center;
+		}
+		@include mq(max, lg) {
+			flex-wrap: nowrap;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			// align-items: center;
+			// justify-content: center;
 		}
 		@include mq(min, xl) {
-			gap: 20px 40px;
+			// gap: 20px 40px;
 		}
 	}
 
-	&__content-item {
-		aspect-ratio: 1 / 1;
+	&__item {
+		// aspect-ratio: 1 / 1;
 		background: $color-base-06;
-		border-radius: 100vh;
+		border-radius: 20px;
+		// border-radius: 100vh;
 		box-shadow: 4px 4px 2px 0px $color-accent-04;
-		font-size: clamp(1rem, 3.8vw, 1.375rem);
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		// margin: auto 0;
+		// text-align: center;
+		// width: 100%\;
+		width: calc((100% - 40px) / 3);
+		// @include mq(min, sm) {
+		// 	font-size: 1rem;
+		// 	// padding: 20px 30px;
+		// 	// width: max(42vw, 300px);
+		// 	// height: max(42vw, 300px);
+		// }
+		// @include mq(max, md) {
+		// 	scroll-snap-align: start;
+		// 	margin: 0 auto;
+		// 	margin-left: 10px;
+		// 	margin-right: 10px;
+		// 	// padding: 20px 20px;
+		// 	// width: calc(100% - 60px);
+		// }
+		// @include mq(min, md) {
+		// 	padding: 20px 20px;
+		// 	// max-width: 400px;
+		// 	// width: calc(46% - 40px);
+		// 	// height: calc(46% - 40px);
+		// 	// width: 50%;
+		// }
+		// @include mq(min, xl) {
+		// 	padding: 30px 30px;
+		// 	// max-width: 300px;
+		// 	// width: calc(30% - 60px);
+		// 	// height: calc(30% - 60px);
+		// }
+		// width: 100%;
+		// height: 260px;
+
+		// &:nth-child(odd) {
+		// 	display: flex;
+		// 	justify-content: flex-start;
+		// }
+		// &:nth-child(even) {
+		// 	display: flex;
+		// 	justify-content: flex-end;
+		// }
+
+		@include mq(max, lg) {
+			width: 100%;
+		}
+	}
+
+	&__item-inner {
+		background: $color-base-06;
+		// box-shadow: 4px 4px 2px 0px $color-accent-04;
+		width: 50%;
+		height: 100%;
+	}
+
+	&__item-inner2 {
+		display: contents;
+	}
+
+	&__item-text {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		line-height: 1.5;
-		// margin: auto 0;
+		flex-direction: column;
 		text-align: center;
+		font-size: clamp(1rem, 3.8vw, 1.375rem);
+		line-height: 1.5;
+		margin: auto 0;
+		width: 100%;
+		height: 100%;
+
 		@include mq(min, sm) {
 			font-size: 1rem;
-			// padding: 20px 30px;
-			// width: max(42vw, 300px);
-			// height: max(42vw, 300px);
+			padding: 20px 30px;
 		}
 		@include mq(max, md) {
-			scroll-snap-align: start;
-			// margin: auto calc(10vw - 20px);
-			margin: 0 auto;
+			// scroll-snap-align: start;
+			// margin: 0 auto;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		@include mq(min, md) {
 			padding: 20px 20px;
-			width: 76vw;
-			height: 76vw;
 		}
 		@include mq(min, xl) {
 			font-size: 1.125rem;
 			padding: 30px 30px;
-			width: max(24vw, 320px);
-			height: max(24vw, 320px);
+		}
+	}
+}
+
+
+.lineTrigger {
+	position: relative;
+	opacity:0;
+
+	&.lineAnime{
+		animation-name:lineAnimeBase;
+		animation-duration:.5s;
+		animation-fill-mode:forwards;
+
+		&::before {
+			animation: lineAnimeTopBottom .5s linear 0s forwards;/*表示されて0秒後に上線が0.5秒かけて表示*/
+		}
+
+		&::after {
+			animation: lineAnimeTopBottom .5s linear 1s forwards;/*表示されて1秒後に下線が0.5秒かけて表示*/
+		}
+
+		.lineAnimeInner {
+
+			&::before {
+				animation: lineAnimeLeftRight .5s linear .5s forwards;/*表示されて0.5秒後に右線が0.5秒かけて表示*/
+			}
+
+			&::after {
+				animation: lineAnimeLeftRight .5s linear 1.5s forwards;/*表示されて1.5秒後に左線が0.5秒かけて表示*/
+			}
+		}
+
+		.lineContents{
+			/* animation: lineAnimeContents .5s linear 1.5s forwards; *//*1.5秒後に中央のエリアが0.5秒かけて表示*/
+			opacity: 0;/*初期値を透過0にする*/
+		}
+
+		@keyframes lineAnimeTopBottom {
+			0% {width:0%;}
+			100%{width:100%;}
+		}
+
+		@keyframes lineAnimeLeftRight {
+			0% {height:0%;}
+			100%{height:100%;}
+		}
+
+		@keyframes lineAnimeContents{
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+	}
+
+	@keyframes lineAnimeBase{
+		from {
+			opacity:0;
+		}
+
+		to {
+			opacity:1;
+		}
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		background: $color-accent;
+		width:0;
+		height:1px;
+	}
+
+	&::before {
+		top:0;
+		left:0;
+	}
+
+	&::after {
+		bottom:0;
+		right:0;
+	}
+
+	.lineAnimeInner {
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			background: $color-accent;
+			width: 1px;
+			height:0;
+		}
+
+		&::before{
+			top:0;
+			right:0;
+		}
+
+		&::after{
+			bottom:0;
+			left:0;
+		}
+	}
+
+
+}
+
+.fadeUpTrigger,
+.fadeLeftTrigger,
+.fadeRightTrigger{
+    opacity: 0;
+}
+.fadeUpTrigger {
+	&.fadeUp {
+		animation-name: fadeUpAnime;
+		animation-duration:0.5s;
+		animation-fill-mode:forwards;
+		opacity:0;
+
+		&.delay-time02 {
+			animation-delay: 0.5s;
+		}
+		&.delay-time03 {
+			animation-delay: 1.0s;
+		}
+		&.delay-time04 {
+			animation-delay: 1.5s;
+		}
+		&.delay-time05 {
+			animation-delay: 2.0s;
+		}
+	}
+
+	@keyframes fadeUpAnime{
+		from {
+			opacity: 0;
+			transform: translateY(100px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }
@@ -594,12 +853,27 @@ $ly-tab: 60px;
 		padding-bottom: 0 !important;
 	}
 
+	&__img {
+		position: relative;
+		background: url(../img/services-img01.jpg) center / cover no-repeat;
+		background-attachment: fixed;
+		width: 100%;
+		height: calc(100vh / 2);
+	}
+
 	&__first {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 
+		&:nth-of-type(5){
+			.services__img {
+				background-image: url(../img/services-img03.jpg);
+			}
+		}
+
 		@include mq(max, xl) {
-			flex-direction: column;
+			// flex-direction: column;
 		}
 		@include mq(min, xl) {
 		}
@@ -615,144 +889,152 @@ $ly-tab: 60px;
 	&__first-text {
 		@include services-text-area-bk();
 		display: flex;
+		width: 100%;
 		z-index: 10;
 		@include mq(max, xl) {
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px) );
-			width: 100%;
+			// clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px) );
+			// width: 100%;
 		}
 		@include mq(min, xl) {
-			justify-content: flex-end;
-			width: calc(50% + 100px);
-			clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
+			// justify-content: flex-end;
+			// width: calc(50% + 100px);
+			// clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0 100%);
 		}
 
 		&__inner {
 			width: 100%;
 			@include mq(max, xl) {
-				padding: 60px $ly-sp 120px;
+				padding: 80px $ly-sp;
 			}
 			@include mq(min, xl) {
-				max-width: calc(550px + 100px);
-				padding: 100px 120px 100px 0;
+				// max-width: calc(550px + 100px);
+				// padding: 100px 120px 100px 0;
+				padding: 80px 0;
+				// max-width: 800px;
 			}
 		}
 	}
 
-	&__first-img {
-		position: relative;
-		@include mq(max, xl) {
-			width: 100%;
-			height: $services-cont-h-sp;
-		}
-		@include mq(min, xl) {
-			width: calc(50% - 100px);
-			height: $services-cont-h-pc;
-		}
+	// &__first-img {
+	// 	position: relative;
+	// 	background: url(../img/services-img01.jpg) center / cover no-repeat;
+	// 	background-attachment: fixed;
+	// 	width: 100%;
+	// 	height: calc(100vh / 2);
 
-		&__inner {
-			position: absolute;
-			height: 100%;
-			z-index: 5;
-			@include mq(max, xl) {
-				top: -60px;
-				left: 0;
-				width: 100%;
-				height: calc(100% + 60px);
-			}
-			@include mq(min, xl) {
-				top: 0;
-				left: -100px;
-				width: calc(100% + 100px);
-			}
+	// 	// &__inner {
+	// 	// 	position: absolute;
+	// 	// 	height: 100%;
+	// 	// 	z-index: 5;
+	// 	// 	@include mq(max, xl) {
+	// 	// 		top: -60px;
+	// 	// 		left: 0;
+	// 	// 		width: 100%;
+	// 	// 		height: calc(100% + 60px);
+	// 	// 	}
+	// 	// 	@include mq(min, xl) {
+	// 	// 		top: 0;
+	// 	// 		left: -100px;
+	// 	// 		width: calc(100% + 100px);
+	// 	// 	}
 
-			img {
-				width: 100%;
-				height: 100%;
-				@include mq(max, xl) {
-					width: 100%;
-				}
-				@include mq(min, xl) {
-				}
-			}
-		}
-	}
+	// 	// 	img {
+	// 	// 		width: 100%;
+	// 	// 		height: 100%;
+	// 	// 		@include mq(max, xl) {
+	// 	// 			width: 100%;
+	// 	// 		}
+	// 	// 		@include mq(min, xl) {
+	// 	// 		}
+	// 	// 	}
+	// 	// }
+	// }
 
 	&__second {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 
 		@include mq(max, xl) {
 			flex-direction: column;
 		}
 		@include mq(min, xl) {
-			flex-direction: row-reverse;
+			// flex-direction: row-reverse;
+		}
+
+		&:nth-of-type(3){
+			.services__img {
+				background-image: url(../img/services-img02.jpg);
+			}
 		}
 	}
 
 	&__second-text {
 		@include services-text-area-bk();
 		display: flex;
+		width: 100%;
 		z-index: 10;
 		@include mq(max, xl) {
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
-			width: 100%;
+			// clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px));
+			// width: 100%;
 		}
 		@include mq(min, xl) {
-			justify-content: flex-start;
-			width: calc(50% + 100px);
-			clip-path: polygon(0 0, 100% 0, 100% 100%, 100px 100%);
+			// justify-content: flex-start;
+			// width: calc(50% + 100px);
+			// clip-path: polygon(0 0, 100% 0, 100% 100%, 100px 100%);
 		}
 
 		&__inner {
 			width: 100%;
 			@include mq(max, xl) {
-				padding: 60px $ly-sp 120px;
+				padding: 80px $ly-sp;
 			}
 			@include mq(min, xl) {
-				max-width: calc(550px + 100px);
-				padding: 100px 0 100px 120px;
+				// max-width: calc(550px + 100px);
+				// padding: 100px 0 100px 120px;
+				padding: 80px 0;
 			}
 		}
 	}
 
-	&__second-img {
-		position: relative;
-		@include mq(max, xl) {
-			width: 100%;
-			height: $services-cont-h-sp;
-		}
-		@include mq(min, xl) {
-			width: calc(50% - 100px);
-			height: $services-cont-h-pc;
-		}
+	// &__second-img {
+	// 	position: relative;
+	// 	@include mq(max, xl) {
+	// 		width: 100%;
+	// 		height: $services-cont-h-sp;
+	// 	}
+	// 	@include mq(min, xl) {
+	// 		width: calc(50% - 100px);
+	// 		height: $services-cont-h-pc;
+	// 	}
 
-		&__inner {
-			position: absolute;
-			height: 100%;
-			z-index: 5;
-			@include mq(max, xl) {
-				top: -60px;
-				left: 0;
-				width: 100%;
-				height: calc(100% + 60px);
-			}
-			@include mq(min, xl) {
-				top: 0;
-				left: 0;
-				width: calc(100% + 100px);
-			}
+	// 	&__inner {
+	// 		position: absolute;
+	// 		height: 100%;
+	// 		z-index: 5;
+	// 		@include mq(max, xl) {
+	// 			top: -60px;
+	// 			left: 0;
+	// 			width: 100%;
+	// 			height: calc(100% + 60px);
+	// 		}
+	// 		@include mq(min, xl) {
+	// 			top: 0;
+	// 			left: 0;
+	// 			width: calc(100% + 100px);
+	// 		}
 
-			img {
-				width: 100%;
-				height: 100%;
-				@include mq(max, xl) {
-					width: 100%;
-				}
-				@include mq(min, xl) {
-				}
-			}
-		}
-	}
+	// 		img {
+	// 			width: 100%;
+	// 			height: 100%;
+	// 			@include mq(max, xl) {
+	// 				width: 100%;
+	// 			}
+	// 			@include mq(min, xl) {
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	&__content-title {
 		color: $color-accent;
@@ -1042,3 +1324,10 @@ $ly-tab: 60px;
 		}
 	}
 }
+
+
+// .swiper-slide {
+// 	@include mq(max, sm) {
+// 		width: initial;
+// 	}
+// }

@@ -1,17 +1,17 @@
 @charset "UTF-8";
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .swiper-container {
     padding-bottom: 50px;
     position: relative;
     overflow: hidden; /* パディングボックスに合わせて切り取られる */
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .swiper-container .swiper-wrapper {
     /* display: flex; */
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .swiper-container .swiper-wrapper .swiper-slide {
     text-align: center;
 	/* flex-shrink: initial;
@@ -21,11 +21,20 @@
 	transition-property: initial;
 	display: initial; */
   }
+
 }
+/* @media screen and (min-width: 769px) {
+	.swiper-slide {
+		width: initial;
+		height: initial;
+		flex-shrink: initial;
+		transition-property: none;
+	}
+} */
 .swiper-container .swiper-pagination {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .swiper-container .swiper-pagination {
     display: block;
     position: absolute;

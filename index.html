@@ -8,8 +8,8 @@
 	<title>AUTOHUB：Japanese Used Car Export Services</title>
 	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="shortcut icon" href="https://s3.amazonaws.com/pro.brandkit.io/accounts/autohub/images/size_16_favicon-148.png">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans:wght@700&family=Roboto+Serif:opsz,wght@8..144,400;8..144,700&family=Roboto:wght@400;700&family=Source+Serif+4:ital,opsz,wght@1,8..60,900&display=swap" rel="stylesheet">
 
 	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 
 	<!-- swiper -->
 
@@ -60,7 +60,11 @@
 				<p class="mv__catch-main">Ask car supplier to ship <br class="non-pc">with AUTOHUB.</p>
 				<p class="mv__catch-sub">You quickly receive <br class="non-pc">the most trustful information</p>
 			</div>
-			<a class="mv__contact-btn" href="https://www.autohub.co.jp/contact.php?lan=en">Contact</a>
+			<div class="mv-contact">
+				<a class="contact__btn mv-contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
+					<div class="contact__btn-inner mv-contact__btn-inner"><p>Contact us first</p></div>
+				</a>
+			</div>
 		</div>
 
 		<section class="main">
@@ -83,54 +87,146 @@
 		</section>
 
 		<section class="secondary">
+			<div class="secondary__inner">
 			<div class="ly-cont">
 				<div class="secondary__wrap">
 					<h2 class="sec-title">Used Vehicle Shipping Service from Japan<br>by AUTOHUB</h2>
-					<div class="secondary__content swiper-container">
+					<!-- <div class="secondary__content swiper-container">
 						<ol class="secondary__content-list swiper-wrapper">
-							<li class="swiper-slide">
-								<div class="secondary__content-item">
+							<li class="secondary__content-item swiper-slide">
+									<p>Since <span class="emphasis">AUTOHUB</span> was established in 2005,<br><span class="emphasis">AUTOHUB</span> have been arrange the shipping of over 50,000 vehicles every year <span class="emphasis">from Japan to all over the world</span>.</p>
+							</li>
+							<li class="secondary__content-item swiper-slide">
+									<p><span class="emphasis">AUTOHUB</span> company slogan is <br><span class="emphasis">"I'll try it!"</span><br><span class="emphasis">AUTOHUB</span> will do our best to meet customer <span class="emphasis">requests</span> and take <span class="emphasis">suggestions</span> from our employees seriously.</p>
+							</li>
+							<li class="secondary__content-item swiper-slide">
+									<p><span class="emphasis">AUTOHUB</span> give <span class="emphasis">top priority</span> to the voices of customers,<br>and <span class="emphasis">AUTOHUB</span> will continue to <span class="emphasis">improve</span> our services every day based on customers feedback.</p>
+							</li>
+							<li class="secondary__content-item swiper-slide">
+									<p><span class="emphasis">AUTOHUB</span> provides services not only exporters but also importers who purchase used vehicles in Japan.<br>Importers can use the services with <span class="emphasis">peace of mind</span>.</p>
+							</li>
+							<li class="secondary__content-item swiper-slide">
+									<p><span class="emphasis">AUTOHUB</span> provides unique services that other companies do not provide.<br>When you purchase a used vehicle from Japan,<br><span class="emphasis">"Why not choose AUTOHUB ?" </span><br>With a few simple steps, <br>you can access many services.</p>
+							</li>
+						</ol>
+						<div class="swiper-pagination"></div>
+					</div> -->
+					<!-- <div class="secondary__content">
+						<ol class="secondary__list">
+							<li class="secondary__item">
+								<div class="secondary__item-inner lineTrigger">
+									<div class="secondary__item-inner2 lineAnimeInner">
+										<div class="secondary__item-inner2 lineContents">
+											<div class="secondary__item-text">
+												<p>01</p>
+												<p>Since <span class="emphasis">AUTOHUB</span> was established in 2005,<br><span class="emphasis">AUTOHUB</span> have been arrange the shipping of over 50,000 vehicles every year <span class="emphasis">from Japan to all over the world</span>.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="secondary__item">
+								<div class="secondary__item-inner lineTrigger">
+									<div class="secondary__item-inner2 lineAnimeInner">
+										<div class="secondary__item-inner2 lineContents">
+											<div class="secondary__item-text">
+												<p><span class="emphasis">AUTOHUB</span> company slogan is <span class="emphasis">"I'll try it!"</span><br><span class="emphasis">AUTOHUB</span> will do our best to meet customer <span class="emphasis">requests</span> and take <span class="emphasis">suggestions</span> from our employees seriously.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="secondary__item">
+								<div class="secondary__item-inner lineTrigger">
+									<div class="secondary__item-inner2 lineAnimeInner">
+										<div class="secondary__item-inner2 lineContents">
+											<div class="secondary__item-text">
+												<p><span class="emphasis">AUTOHUB</span> give <span class="emphasis">top priority</span> to the voices of customers,<br>and <span class="emphasis">AUTOHUB</span> will continue to <span class="emphasis">improve</span> our services every day based on customers feedback.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="secondary__item">
+								<div class="secondary__item-inner lineTrigger">
+									<div class="secondary__item-inner2 lineAnimeInner">
+										<div class="secondary__item-inner2 lineContents">
+											<div class="secondary__item-text">
+												<p><span class="emphasis">AUTOHUB</span> provides services not only exporters but also importers who purchase used vehicles in Japan.<br>Importers can use the services with <span class="emphasis">peace of mind</span>.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="secondary__item">
+								<div class="secondary__item-inner lineTrigger">
+									<div class="secondary__item-inner2 lineAnimeInner">
+										<div class="secondary__item-inner2 lineContents">
+											<div class="secondary__item-text">
+												<p><span class="emphasis">AUTOHUB</span> provides unique services that other companies do not provide.<br>When you purchase a used vehicle from Japan,<br><span class="emphasis">"Why not choose AUTOHUB ?" </span><br>With a few simple steps, <br>you can access many services.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ol>
+					</div> -->
+					<!-- <div class="secondary__content"> -->
+						<ol class="secondary__list">
+							<li class="secondary__item fadeUpTrigger">
+								<div class="secondary__item-text">
+									<p>01</p>
 									<p>Since <span class="emphasis">AUTOHUB</span> was established in 2005,<br><span class="emphasis">AUTOHUB</span> have been arrange the shipping of over 50,000 vehicles every year <span class="emphasis">from Japan to all over the world</span>.</p>
 								</div>
 							</li>
-							<li class="swiper-slide">
-								<div class="secondary__content-item">
-									<p><span class="emphasis">AUTOHUB</span> company slogan is <br><span class="emphasis">"I'll try it!"</span><br><span class="emphasis">AUTOHUB</span> will do our best to meet customer <span class="emphasis">requests</span> and take <span class="emphasis">suggestions</span> from our employees seriously.</p>
+							<li class="secondary__item fadeUpTrigger delay-time02">
+								<div class="secondary__item-text">
+									<p>02</p>
+									<p><span class="emphasis">AUTOHUB</span> company slogan is <span class="emphasis">"I'll try it!"</span><br><span class="emphasis">AUTOHUB</span> will do our best to meet customer <span class="emphasis">requests</span> and take <span class="emphasis">suggestions</span> from our employees seriously.</p>
 								</div>
 							</li>
-							<li class="swiper-slide">
-								<div class="secondary__content-item">
+							<li class="secondary__item fadeUpTrigger delay-time03">
+								<div class="secondary__item-text">
+									<p>03</p>
 									<p><span class="emphasis">AUTOHUB</span> give <span class="emphasis">top priority</span> to the voices of customers,<br>and <span class="emphasis">AUTOHUB</span> will continue to <span class="emphasis">improve</span> our services every day based on customers feedback.</p>
 								</div>
 							</li>
-							<li class="swiper-slide">
-								<div class="secondary__content-item">
+							<li class="secondary__item fadeUpTrigger delay-time04">
+								<div class="secondary__item-text">
+									<p>04</p>
 									<p><span class="emphasis">AUTOHUB</span> provides services not only exporters but also importers who purchase used vehicles in Japan.<br>Importers can use the services with <span class="emphasis">peace of mind</span>.</p>
 								</div>
 							</li>
-							<li class="swiper-slide">
-								<div class="secondary__content-item">
+							<li class="secondary__item fadeUpTrigger delay-time05">
+								<div class="secondary__item-text">
+									<p>05</p>
 									<p><span class="emphasis">AUTOHUB</span> provides unique services that other companies do not provide.<br>When you purchase a used vehicle from Japan,<br><span class="emphasis">"Why not choose AUTOHUB ?" </span><br>With a few simple steps, <br>you can access many services.</p>
 								</div>
 							</li>
 						</ol>
-						<div class="swiper-pagination"></div>
-					</div>
+					<!-- </div> -->
 				</div>
+			</div>
 			</div>
 		</section>
 
 		<section class="contact">
 			<div class="ly-cont">
 				<div class="contact__wrap">
-					<h2 class="sec-title">Get Started</h2>
-					<div class="contact__btn-unit">
-						<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
-						<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
-							<div class="contact__btn-wrap"><p>Contact us first</p></div>
-						</a>
+					<div class="lineTrigger">
+						<div class="lineAnimeInner">
+							<div class="contact__content">
+								<h2 class="sec-title">Get Started</h2>
+								<div class="contact__btn-unit">
+									<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
+									<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
+										<div class="contact__btn-inner"><p>Contact us first</p></div>
+									</a>
+								</div>
+								<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
+							</div><!-- /.contact__content -->
+						</div>
 					</div>
-					<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
 				</div>
 			</div>
 		</section>
@@ -143,17 +239,17 @@
 				<div class="services__content">
 					<div class="services__first">
 						<div class="services__first-text">
-							<div class="services__first-text__inner">
+							<div class="services__first-text__inner ly-cont">
 								<h3 class="services__content-title" data-en="Service 01"><span>Vehicle Tracking with AUTOHUB's "Consignee T&T"</span></h3>
 								<p class="services__content-text"><span class="emphasis">"Consignee T&T"</span> is the tracking service exclusively for the <span class="emphasis">importer</span> who can to check the status at any time without going through the exporter.</p>
 								<p class="services__content-text">With just a PC or smart phone, now you can check <span class="emphasis">shipping schedules, Estimated Date of Departure and Arrival, vessel delays/changes</span>, etc.<br>that previously required confirmation with exporter.</p>
 								<p class="services__content-text">With <span class="emphasis">"Consignee T&T"</span> you can check them at anytime, anywhere.<br>The status is updated for each step, so you can check the current status at a glance.</p>
 							</div>
 						</div>
-						<div class="services__first-img">
-							<div class="services__first-img__inner">
+						<div class="services__img">
+							<!-- <div class="services__first-img__inner">
 								<img src="img/services-img01.jpg" alt="">
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="services__first-detail ly-cont">
@@ -211,7 +307,7 @@
 					</div>
 					<div class="services__second">
 						<div class="services__second-text">
-							<div class="services__second-text__inner">
+							<div class="services__second-text__inner ly-cont">
 								<h3 class="services__content-title" data-en="Service 02"><span>Priority Shipping with AUTOHUB's PAS<br>(Platinum Auto Space)</span></h3>
 								<p class="services__content-text">"I have been waiting for my vehicle to be shipped for months. I need my vehicle quickly."</p>
 								<p class="services__content-text">If a importer have such a problem, <span class="emphasis">Platinum Auto Space (PAS)</span> is the best solution. </p>
@@ -219,10 +315,10 @@
 								<p class="services__content-text">Buy <span class="emphasis">PAS</span> and ship quickly.<br>Or, wait for a long time ?</p>
 							</div>
 						</div>
-						<div class="services__second-img">
-							<div class="services__second-img__inner">
+						<div class="services__img">
+							<!-- <div class="services__second-img__inner">
 								<img src="img/services-img02.jpg" alt="">
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="services__second-detail">
@@ -232,7 +328,7 @@
 					</div>
 					<div class="services__first">
 						<div class="services__first-text">
-							<div class="services__first-text__inner">
+							<div class="services__first-text__inner ly-cont">
 								<h3 class="services__content-title" data-en="Service 03"><span>Free Marine Insurance with AUTOHUB's Marine Insurance</span></h3>
 								<p class="services__content-text"><span class="emphasis">AUTOHUB's Marine Insurance</span> is free and ALL RISK for your vehicles.</p>
 								<ul class="services__content-list">
@@ -255,10 +351,10 @@
 								</ul>
 							</div>
 						</div>
-						<div class="services__first-img">
-							<div class="services__first-img__inner">
+						<div class="services__img">
+							<!-- <div class="services__first-img__inner">
 								<img src="img/services-img03.jpg" alt="">
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -268,14 +364,20 @@
 		<section class="contact">
 			<div class="ly-cont">
 				<div class="contact__wrap">
-					<h2 class="sec-title">Get Started</h2>
-					<div class="contact__btn-unit">
-						<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
-						<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
-							<div class="contact__btn-wrap"><p>Contact us first</p></div>
-						</a>
+					<div class="lineTrigger">
+						<div class="lineAnimeInner">
+							<div class="contact__content">
+								<h2 class="sec-title">Get Started</h2>
+								<div class="contact__btn-unit">
+									<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
+									<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
+										<div class="contact__btn-inner"><p>Contact us first</p></div>
+									</a>
+								</div>
+								<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
+							</div><!-- /.contact__content -->
+						</div>
 					</div>
-					<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
 				</div>
 			</div>
 		</section>
@@ -314,18 +416,25 @@
 		<section class="contact">
 			<div class="ly-cont">
 				<div class="contact__wrap">
-					<h2 class="sec-title">Get Started</h2>
-					<div class="contact__btn-unit">
-						<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
-						<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
-							<div class="contact__btn-wrap"><p>Contact us first</p></div>
-						</a>
+					<div class="lineTrigger">
+						<div class="lineAnimeInner">
+							<div class="contact__content">
+								<h2 class="sec-title">Get Started</h2>
+								<div class="contact__btn-unit">
+									<p class="contact__btn-text">＼ Please feel free to contact us ／</p>
+									<a class="contact__btn" href="https://www.autohub.co.jp/contact.php?lan=en">
+										<div class="contact__btn-inner"><p>Contact us first</p></div>
+									</a>
+								</div>
+								<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
+							</div><!-- /.contact__content -->
+						</div>
 					</div>
-					<p class="contact__text">Let AUTOHUB take care of your used vehicle import needs!</p>
 				</div>
 			</div>
 		</section>
 	</main>
+
 	<footer class="footer">
 		<div class="footer__follow">
 			<h2 class="footer__follow-title">Follow us</h2>
@@ -339,7 +448,10 @@
 		</p>
 	</footer>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 	<script src="js/script.js"></script>
 </body>
 </html>
